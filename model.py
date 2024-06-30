@@ -83,6 +83,9 @@ emotion_emoticons = {
 # Prediction button
 if st.button('Analyze'):
     if input_text:
+        # Display input text with left alignment
+        st.markdown(f"<p style='text-align: left;'>Input text: {input_text}</p>", unsafe_allow_html=True)
+        
         st.markdown("<h3 style='text-align: left;'>Predicted Emotions:</h3>", unsafe_allow_html=True)
 
         # Initialize pipeline for text classification using the NusaBERT model
